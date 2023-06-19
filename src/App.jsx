@@ -7,7 +7,7 @@ import SinglePost from './components/SinglePost';
 import AccountLogin from './components/registration/AccountLogin';
 import RegisterUser from './components/registration/RegisterUser';
 import Registration from './components/registration/Registration'
-import EditPost from './components/EditPost';
+import EditPost from './components/editanddelete/EditPost';
 import './index.css';
 
 const cohort = "2304-FTB-ET-WEB-FT";

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Link } from "react";
 import { useNavigate } from "react-router-dom";
-import SinglePost from "./SinglePost";
-import Navbar from "./Navbar";
-import Register from "./registration/Registration";
-import SearchBar from "./searchbar/SearchBar";
+import SinglePost from "../SinglePost";
+import Navbar from "../Navbar";
+import Register from "../registration/Registration";
+import SearchBar from "../searchbar/SearchBar";
 import { Route, Routes } from 'react-router-dom';
 
 function EditPost() {

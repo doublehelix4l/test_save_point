@@ -5,7 +5,7 @@ import '../index.css'
 import AccountLogin from "./registration/AccountLogin";
 import { useState, useEffect } from "react";
 import Register from "./registration/Registration";
-import EditPost from "./EditPost";
+import EditPost from "./editanddelete/EditPost";
 import { Route, Routes } from 'react-router-dom';
 
 function Navbar(props) {

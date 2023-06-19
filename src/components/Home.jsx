@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import SinglePost from "./SinglePost";
 import SearchBar from "./searchbar/SearchBar";
 import AccountLogin from "./registration/AccountLogin";
-import EditPost from "./EditPost";
+import EditPost from "./editanddelete/EditPost";
 
 function Home({ allPosts }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
