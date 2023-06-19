@@ -7,6 +7,7 @@ import SinglePost from './components/SinglePost';
 import AccountLogin from './components/registration/AccountLogin';
 import RegisterUser from './components/registration/RegisterUser';
 import Registration from './components/registration/Registration'
+import EditPost from './components/EditPost';
 import './index.css';
 
 const cohort = "2304-FTB-ET-WEB-FT";
@@ -14,7 +15,7 @@ const baseURL = `https://strangers-things.herokuapp.com/api/${cohort}`;
 
 function App() {
   const [allPosts, setAllPosts] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loggedInUser, setLoggedInUser] = useState([]);
   //set login
 
@@ -49,12 +50,12 @@ function App() {
         <h1>Not Stranger Things but Stranger's Things...</h1>
       </div>
         <h3>Buy, Sell, or Trade</h3>
-        <Navbar setIsLoggedIn={setIsLoggedIn} loggedInUser={loggedInUser}/>
+        <Navbar setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} loggedInUser={loggedInUser}/>
     </div>
 
       <Routes>
         <Route path="/" element={<Home allPosts={allPosts} />} />
-        
+        <Route path='./components/EditPost' element={<EditPost  allPosts={allPosts} loggedInUser={loggedInUser}/>}/>
         <Route path="/components/SinglePost" element={<SinglePost allPosts={allPosts} /> }/>
         
         <Route path="/components/PostDeets/:_id" element={<PostDeets allPosts={allPosts} isLoggedIn={isLoggedIn} loggedInUser={loggedInUser}/>} />

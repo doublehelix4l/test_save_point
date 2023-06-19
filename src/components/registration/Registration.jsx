@@ -6,11 +6,11 @@ const Register = (props) => {
   const setIsLoggedIn = props.setIsLoggedIn
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate= useNavigate()
+  const navigate = useNavigate()
 
-  const handleSubmit = async(e)=>{
-    e.preventDefault() 
-   
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
     try {
       const result = await RegisterUser(username, password)
       console.log(result)

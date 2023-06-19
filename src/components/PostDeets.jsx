@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import SinglePost from "./SinglePost";
 
 function PostDeets(props) {
   const [post, setPost] = useState({});
   const { _id } = useParams();
   const isLoggedIn = props.isLoggedIn;
 
-  // console.log(_id);
 
   useEffect(() => {
     const foundPost = props.allPosts.find((p) => p._id === _id);
@@ -29,7 +29,7 @@ function PostDeets(props) {
     <div className="post-card">
       {post ? (
         <>
-          <h2>Stranger's Post:</h2>
+          <h2>{`Stranger's Post:`}</h2>
           <div id="post-card-body">
             <h3>Post Title: {post.title}</h3>
             <h3>Post Description: {post.description}</h3>
